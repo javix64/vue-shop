@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Rajdhani:wght@500&display=swap');
+
+
+$color1:#e63946;
+$color2:#f1faee;
+$color3:#a8dadc;
+$color4:#457b9d;
+body{
+    background-color:$color2;
+    margin:0;
+    padding:0;
+}
+///navegacion footer & header
+.nav{
+    font-family: 'Rajdhani', sans-serif;
+    background-color: $color4;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+    a{
+        color:$color3;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover{
+            color:$color2;
+        }
+    }
+}
+.links{
+    margin-right: 30px;
+}

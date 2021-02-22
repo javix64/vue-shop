@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <VHeader/>
+    <router-view v-bind:shop="shop"/>
+    <VFooter />
   </div>
 </template>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<script>
+import {db} from './db'
+import VHeader from './components/vHeader.vue'
+import VFooter from './components/vFooter.vue'
+export default {
+  name: 'Home',
+  components: {
+    VHeader,
+    VFooter
+  },
+  data() {
+    return {
+      shop: [],
     }
-  }
+  },
+
+  firestore:{
+    shop: db.collection('shop'),
+  },
+  methods: {
+    
+  },
 }
+
+</script>
+<style lang="scss" >
+@import "./styles/_mixins.scss";
+@import "./styles/main.scss";
 </style>

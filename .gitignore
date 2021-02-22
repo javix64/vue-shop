@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+/uploadJson
 
 # local env files
 .env.local
