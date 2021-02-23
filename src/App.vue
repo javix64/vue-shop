@@ -22,7 +22,10 @@ export default {
   },
 
   firestore:{
-    shop: db.collection('shop'),
+    //shop: db.collection('shop'),
+    shop: db.collection('shop').orderBy('nombre').limit(2),
+    carrito: db.collection('carrito')
+
   },
   methods: {
     

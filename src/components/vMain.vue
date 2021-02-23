@@ -39,7 +39,7 @@ import Novedades from '../components/Novedades.vue'
       timeout(){
         setTimeout(() => {
           this.content=this.shop
-        }, 2000);
+        }, 490);
       }
     },
     computed: {
